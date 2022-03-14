@@ -37,4 +37,4 @@ CMD jupyter-lab \
 # ENV LD_LIBRARY_PATH /usr/local/cuda-10.2/compat
 # RUN echo "export PATH=$PATH:/workspace/data" >> ~/.bashrc
 # docker build -t rapidsc:1.1 .
-# docker run --gpus 0 --name scDock -p 8888:8888 -v /mnt/??/??/:/data rapidsc:1.0
+# docker run --gpus 0 --name scDock -p 8992:8992 -v /mnt/??/??/:/data rapidsc:1.0

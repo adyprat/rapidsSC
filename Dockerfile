@@ -24,16 +24,19 @@ RUN git clone \
 ARG GIT_BRANCH=master
 RUN cd rapids-single-cell-examples && git checkout ${GIT_BRANCH} && git pull
 WORKDIR /data
+RUN cd /data
 CMD jupyter-lab \
 		--no-browser \
 		--allow-root \
-		--port=8992 \
+		--port=8888 \
 		--ip=0.0.0.0 \
 		--notebook-dir=/workspace \
 		--NotebookApp.password="" \
 		--NotebookApp.token="" \
 		--NotebookApp.password_required=False
 
+
+# install nvidia-docker first https://docs.nvidia.com/cuda/wsl-user-guide/index.html
 # ENV LD_LIBRARY_PATH /usr/local/cuda-10.2/compat
 # RUN echo "export PATH=$PATH:/workspace/data" >> ~/.bashrc
 # docker build -t rapidsc:1.1 .

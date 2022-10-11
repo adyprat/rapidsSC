@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=rapidsai/rapidsai:22.02-cuda11.0-runtime-ubuntu18.04-py3.8
+ARG BASE_IMAGE=rapidsai/rapidsai:22.04-cuda11.4-runtime-ubuntu20.04-py3.8
 
 FROM ${BASE_IMAGE}
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
